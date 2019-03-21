@@ -4,11 +4,11 @@
  * See LICENSE bundled with this library for license details.
  */
 
-namespace Opengento\Gdpr\Api;
+namespace Adexos\Gdpr\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Api\SearchResultsInterface;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterface;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterface;
 
 /**
  * Interface EraseCustomerRepositoryInterface
@@ -19,8 +19,8 @@ interface EraseCustomerRepositoryInterface
     /**
      * Save erase customer scheduler
      *
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerInterface $entity
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerInterface $entity
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      * @throws \Magento\Framework\Exception\CouldNotSaveException
      */
     public function save(EraseCustomerInterface $entity): EraseCustomerInterface;
@@ -29,7 +29,7 @@ interface EraseCustomerRepositoryInterface
      * Retrieve erase customer scheduler by ID
      *
      * @param int $entityId
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
     public function getById(int $entityId): EraseCustomerInterface;
@@ -38,7 +38,7 @@ interface EraseCustomerRepositoryInterface
      * Retrieve erase customer scheduler by customer ID
      *
      * @param int $entityId
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
     public function getByCustomerId(int $entityId): EraseCustomerInterface;
@@ -47,7 +47,7 @@ interface EraseCustomerRepositoryInterface
      * Retrieve erase customer schedulers list by search filter criteria
      *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerSearchResultsInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(SearchCriteriaInterface $searchCriteria): SearchResultsInterface;
@@ -65,7 +65,7 @@ interface EraseCustomerRepositoryInterface
     /**
      * Delete erase customer scheduler
      *
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerInterface $entity
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerInterface $entity
      * @return bool true on success
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\CouldNotDeleteException

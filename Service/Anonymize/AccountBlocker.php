@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Anonymize;
+namespace Adexos\Gdpr\Service\Anonymize;
 
 use Magento\Customer\Model\CustomerRegistry;
 use Magento\Customer\Model\ResourceModel\Visitor\CollectionFactory as VisitorCollectionFactory;

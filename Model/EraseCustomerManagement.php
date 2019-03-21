@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model;
+namespace Adexos\Gdpr\Model;
 
 use Magento\Framework\Exception\AlreadyExistsException;
 use Magento\Framework\Exception\LocalizedException;
@@ -13,11 +13,11 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Phrase;
 use Magento\Framework\Stdlib\DateTime as DateTimeFormat;
 use Magento\Framework\Stdlib\DateTime\DateTime;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterface;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterfaceFactory;
-use Opengento\Gdpr\Api\EraseCustomerManagementInterface;
-use Opengento\Gdpr\Api\EraseCustomerRepositoryInterface;
-use Opengento\Gdpr\Service\ErasureStrategy;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterface;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterfaceFactory;
+use Adexos\Gdpr\Api\EraseCustomerManagementInterface;
+use Adexos\Gdpr\Api\EraseCustomerRepositoryInterface;
+use Adexos\Gdpr\Service\ErasureStrategy;
 
 /**
  * Class EraseCustomerManagement
@@ -25,22 +25,22 @@ use Opengento\Gdpr\Service\ErasureStrategy;
 final class EraseCustomerManagement implements EraseCustomerManagementInterface
 {
     /**
-     * @var \Opengento\Gdpr\Api\Data\EraseCustomerInterfaceFactory
+     * @var \Adexos\Gdpr\Api\Data\EraseCustomerInterfaceFactory
      */
     private $eraseCustomerFactory;
 
     /**
-     * @var \Opengento\Gdpr\Api\EraseCustomerRepositoryInterface
+     * @var \Adexos\Gdpr\Api\EraseCustomerRepositoryInterface
      */
     private $eraseCustomerRepository;
 
     /**
-     * @var \Opengento\Gdpr\Service\ErasureStrategy
+     * @var \Adexos\Gdpr\Service\ErasureStrategy
      */
     private $erasureStrategy;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
@@ -50,10 +50,10 @@ final class EraseCustomerManagement implements EraseCustomerManagementInterface
     private $localeDate;
 
     /**
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerInterfaceFactory $eraseCustomerFactory
-     * @param \Opengento\Gdpr\Api\EraseCustomerRepositoryInterface $eraseCustomerRepository
-     * @param \Opengento\Gdpr\Service\ErasureStrategy $erasureStrategy
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerInterfaceFactory $eraseCustomerFactory
+     * @param \Adexos\Gdpr\Api\EraseCustomerRepositoryInterface $eraseCustomerRepository
+     * @param \Adexos\Gdpr\Service\ErasureStrategy $erasureStrategy
+     * @param \Adexos\Gdpr\Model\Config $config
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $localeDate
      */
     public function __construct(
@@ -79,7 +79,7 @@ final class EraseCustomerManagement implements EraseCustomerManagementInterface
             throw new AlreadyExistsException(new Phrase('Entity for customer id "%1" already exists.', [$customerId]));
         }
 
-        /** @var \Opengento\Gdpr\Api\Data\EraseCustomerInterface $entity */
+        /** @var \Adexos\Gdpr\Api\Data\EraseCustomerInterface $entity */
         $entity = $this->eraseCustomerFactory->create();
         $entity->setCustomerId($customerId);
         $entity->setState(EraseCustomerInterface::STATE_PENDING);

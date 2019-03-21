@@ -18,7 +18,7 @@
         </field>
         <field id="strategy" type="select" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Default Erasure Strategy</label>
-            <source_model>Opengento\Gdpr\Model\Config\Source\EraseStrategy</source_model>
+            <source_model>Adexos\Gdpr\Model\Config\Source\EraseStrategy</source_model>
             <depends>
                 <field id="gdpr/erasure/enabled">1</field>
             </depends>
@@ -68,7 +68,7 @@
             <field id="components" type="editablemultiselect" translate="label comment" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Apply Deletion Strategy</label>
                 <comment>This processors list allows to configure specific erasure strategy by component.</comment>
-                <source_model>Opengento\Gdpr\Model\Config\Source\ErasureComponents</source_model>
+                <source_model>Adexos\Gdpr\Model\Config\Source\ErasureComponents</source_model>
                 <can_be_empty>1</can_be_empty>
                 <config_path>gdpr/erasure/components</config_path>
             </field>

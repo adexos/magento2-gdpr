@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Delete\Processor;
+namespace Adexos\Gdpr\Service\Delete\Processor;
 
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Sales\Api\Data\OrderInterface;
 use Magento\Sales\Model\OrderRepository;
-use Opengento\Gdpr\Service\Delete\ProcessorInterface;
+use Adexos\Gdpr\Service\Delete\ProcessorInterface;
 
 /**
  * Class OrderDataProcessor

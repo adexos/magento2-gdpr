@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service;
+namespace Adexos\Gdpr\Service;
 
 use Magento\Framework\ObjectManager\TMap;
 
@@ -37,7 +37,7 @@ final class DeleteManagement
      */
     public function execute(int $customerId): bool
     {
-        /** @var \Opengento\Gdpr\Service\Delete\ProcessorInterface $processor */
+        /** @var \Adexos\Gdpr\Service\Delete\ProcessorInterface $processor */
         foreach ($this->processorPool as $processor) {
             if (!$processor->execute($customerId)) {
                 return false;
@@ -60,7 +60,7 @@ final class DeleteManagement
             throw new \InvalidArgumentException(\sprintf('Unknown processor type "%s".', $processorName));
         }
 
-        /** @var \Opengento\Gdpr\Service\Delete\ProcessorInterface $processor */
+        /** @var \Adexos\Gdpr\Service\Delete\ProcessorInterface $processor */
         $processor = $this->processorPool->offsetGet($processorName);
         return $processor->execute($customerId);
     }

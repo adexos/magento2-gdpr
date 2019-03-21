@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service;
+namespace Adexos\Gdpr\Service;
 
-use Opengento\Gdpr\Model\Config\ErasureComponentStrategy;
+use Adexos\Gdpr\Model\Config\ErasureComponentStrategy;
 
 /**
  * Class PrivacyStrategy
@@ -23,24 +23,24 @@ final class ErasureStrategy
     /**#@-*/
 
     /**
-     * @var \Opengento\Gdpr\Model\Config\ErasureComponentStrategy
+     * @var \Adexos\Gdpr\Model\Config\ErasureComponentStrategy
      */
     private $componentStrategy;
 
     /**
-     * @var \Opengento\Gdpr\Service\AnonymizeManagement
+     * @var \Adexos\Gdpr\Service\AnonymizeManagement
      */
     private $anonymizeManagement;
 
     /**
-     * @var \Opengento\Gdpr\Service\DeleteManagement
+     * @var \Adexos\Gdpr\Service\DeleteManagement
      */
     private $deleteManagement;
 
     /**
-     * @param \Opengento\Gdpr\Model\Config\ErasureComponentStrategy $componentStrategy
-     * @param \Opengento\Gdpr\Service\AnonymizeManagement $anonymizeManagement
-     * @param \Opengento\Gdpr\Service\DeleteManagement $deleteManagement
+     * @param \Adexos\Gdpr\Model\Config\ErasureComponentStrategy $componentStrategy
+     * @param \Adexos\Gdpr\Service\AnonymizeManagement $anonymizeManagement
+     * @param \Adexos\Gdpr\Service\DeleteManagement $deleteManagement
      */
     public function __construct(
         ErasureComponentStrategy $componentStrategy,

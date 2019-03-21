@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Export\Renderer;
+namespace Adexos\Gdpr\Service\Export\Renderer;
 
 use Magento\Framework\Convert\ConvertArray;
 use Magento\Framework\Filesystem;
-use Opengento\Gdpr\Service\Export\AbstractRenderer;
+use Adexos\Gdpr\Service\Export\AbstractRenderer;
 
 /**
  * Class XmlRenderer

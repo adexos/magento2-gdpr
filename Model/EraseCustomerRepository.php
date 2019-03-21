@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model;
+namespace Adexos\Gdpr\Model;
 
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
@@ -14,12 +14,12 @@ use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Phrase;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterface;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterfaceFactory;
-use Opengento\Gdpr\Api\Data\EraseCustomerSearchResultsInterfaceFactory;
-use Opengento\Gdpr\Api\EraseCustomerRepositoryInterface;
-use Opengento\Gdpr\Model\ResourceModel\EraseCustomer as EraseCustomerResource;
-use Opengento\Gdpr\Model\ResourceModel\EraseCustomer\CollectionFactory;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterface;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterfaceFactory;
+use Adexos\Gdpr\Api\Data\EraseCustomerSearchResultsInterfaceFactory;
+use Adexos\Gdpr\Api\EraseCustomerRepositoryInterface;
+use Adexos\Gdpr\Model\ResourceModel\EraseCustomer as EraseCustomerResource;
+use Adexos\Gdpr\Model\ResourceModel\EraseCustomer\CollectionFactory;
 
 /**
  * Class EraseCustomerRepository
@@ -27,17 +27,17 @@ use Opengento\Gdpr\Model\ResourceModel\EraseCustomer\CollectionFactory;
 final class EraseCustomerRepository implements EraseCustomerRepositoryInterface
 {
     /**
-     * @var \Opengento\Gdpr\Model\ResourceModel\EraseCustomer
+     * @var \Adexos\Gdpr\Model\ResourceModel\EraseCustomer
      */
     private $eraseCustomerResource;
 
     /**
-     * @var \Opengento\Gdpr\Api\Data\EraseCustomerInterfaceFactory
+     * @var \Adexos\Gdpr\Api\Data\EraseCustomerInterfaceFactory
      */
     private $eraseCustomerFactory;
 
     /**
-     * @var \Opengento\Gdpr\Model\ResourceModel\EraseCustomer\CollectionFactory
+     * @var \Adexos\Gdpr\Model\ResourceModel\EraseCustomer\CollectionFactory
      */
     private $collectionFactory;
 
@@ -47,26 +47,26 @@ final class EraseCustomerRepository implements EraseCustomerRepositoryInterface
     private $collectionProcessor;
 
     /**
-     * @var \Opengento\Gdpr\Api\Data\EraseCustomerSearchResultsInterfaceFactory
+     * @var \Adexos\Gdpr\Api\Data\EraseCustomerSearchResultsInterfaceFactory
      */
     private $searchResultsFactory;
 
     /**
-     * @var \Opengento\Gdpr\Api\Data\EraseCustomerInterface[]
+     * @var \Adexos\Gdpr\Api\Data\EraseCustomerInterface[]
      */
     private $instances = [];
 
     /**
-     * @var \Opengento\Gdpr\Api\Data\EraseCustomerInterface[]
+     * @var \Adexos\Gdpr\Api\Data\EraseCustomerInterface[]
      */
     private $instancesByCustomer = [];
 
     /**
-     * @param \Opengento\Gdpr\Model\ResourceModel\EraseCustomer $eraseCustomerResource
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerInterfaceFactory $eraseCustomerFactory
-     * @param \Opengento\Gdpr\Model\ResourceModel\EraseCustomer\CollectionFactory $collectionFactory
+     * @param \Adexos\Gdpr\Model\ResourceModel\EraseCustomer $eraseCustomerResource
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerInterfaceFactory $eraseCustomerFactory
+     * @param \Adexos\Gdpr\Model\ResourceModel\EraseCustomer\CollectionFactory $collectionFactory
      * @param \Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface $collectionProcessor
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerSearchResultsInterfaceFactory $searchResultsFactory
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerSearchResultsInterfaceFactory $searchResultsFactory
      */
     public function __construct(
         EraseCustomerResource $eraseCustomerResource,
@@ -103,7 +103,7 @@ final class EraseCustomerRepository implements EraseCustomerRepositoryInterface
     public function getById(int $entityId, bool $forceReload = false): EraseCustomerInterface
     {
         if ($forceReload || !isset($this->instances[$entityId])) {
-            /** @var \Opengento\Gdpr\Api\Data\EraseCustomerInterface $entity */
+            /** @var \Adexos\Gdpr\Api\Data\EraseCustomerInterface $entity */
             $entity = $this->eraseCustomerFactory->create();
             $this->eraseCustomerResource->load($entity, $entityId, EraseCustomerInterface::ID);
 
@@ -124,7 +124,7 @@ final class EraseCustomerRepository implements EraseCustomerRepositoryInterface
     public function getByCustomerId(int $entityId, bool $forceReload = false): EraseCustomerInterface
     {
         if ($forceReload || !isset($this->instancesByCustomer[$entityId])) {
-            /** @var \Opengento\Gdpr\Api\Data\EraseCustomerInterface $entity */
+            /** @var \Adexos\Gdpr\Api\Data\EraseCustomerInterface $entity */
             $entity = $this->eraseCustomerFactory->create();
             $this->eraseCustomerResource->load($entity, $entityId, EraseCustomerInterface::CUSTOMER_ID);
 
@@ -146,12 +146,12 @@ final class EraseCustomerRepository implements EraseCustomerRepositoryInterface
      */
     public function getList(SearchCriteriaInterface $searchCriteria): SearchResultsInterface
     {
-        /** @var \Opengento\Gdpr\Model\ResourceModel\EraseCustomer\Collection $collection */
+        /** @var \Adexos\Gdpr\Model\ResourceModel\EraseCustomer\Collection $collection */
         $collection = $this->collectionFactory->create();
 
         $this->collectionProcessor->process($searchCriteria, $collection);
 
-        /** @var \Opengento\Gdpr\Api\Data\EraseCustomerSearchResultsInterface $searchResults */
+        /** @var \Adexos\Gdpr\Api\Data\EraseCustomerSearchResultsInterface $searchResults */
         $searchResults = $this->searchResultsFactory->create();
         $searchResults->setSearchCriteria($searchCriteria);
         $searchResults->setItems($collection->getItems());

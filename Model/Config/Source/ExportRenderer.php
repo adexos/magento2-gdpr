@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model\Config\Source;
+namespace Adexos\Gdpr\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 use Magento\Framework\ObjectManager\ConfigInterface;
@@ -57,7 +57,7 @@ class ExportRenderer implements OptionSourceInterface
     private function retrieveRenderers(): array
     {
         $processors = [];
-        $typePreference = $this->objectManagerConfig->getPreference('Opengento\Gdpr\Service\Export\RendererPool');
+        $typePreference = $this->objectManagerConfig->getPreference('Adexos\Gdpr\Service\Export\RendererPool');
         $arguments = $this->objectManagerConfig->getArguments($typePreference);
 
         // Workaround for compiled mode

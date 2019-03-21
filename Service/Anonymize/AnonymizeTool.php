@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Anonymize;
+namespace Adexos\Gdpr\Service\Anonymize;
 
 use Magento\Framework\Math\Random;
 use Magento\Framework\Phrase;

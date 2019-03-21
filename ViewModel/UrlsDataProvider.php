@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\ViewModel;
+namespace Adexos\Gdpr\ViewModel;
 
 use Magento\Cms\Helper\Page as HelperPage;
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
-use Opengento\Gdpr\Model\Config;
+use Adexos\Gdpr\Model\Config;
 
 /**
  * Class UrlsDataProvider
@@ -38,14 +38,14 @@ final class UrlsDataProvider implements ArgumentInterface
     private $helperPage;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
     /**
      * @param \Magento\Framework\UrlInterface $urlBuilder
      * @param \Magento\Cms\Helper\Page $helperPage
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      */
     public function __construct(
         UrlInterface $urlBuilder,

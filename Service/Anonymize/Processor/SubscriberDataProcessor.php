@@ -5,12 +5,12 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Anonymize\Processor;
+namespace Adexos\Gdpr\Service\Anonymize\Processor;
 
 use Magento\Newsletter\Model\ResourceModel\Subscriber as ResourceSubscriber;
 use Magento\Newsletter\Model\SubscriberFactory;
-use Opengento\Gdpr\Service\Anonymize\AnonymizeTool;
-use Opengento\Gdpr\Service\Anonymize\ProcessorInterface;
+use Adexos\Gdpr\Service\Anonymize\AnonymizeTool;
+use Adexos\Gdpr\Service\Anonymize\ProcessorInterface;
 
 /**
  * Class SubscriberDataProcessor
@@ -18,7 +18,7 @@ use Opengento\Gdpr\Service\Anonymize\ProcessorInterface;
 final class SubscriberDataProcessor implements ProcessorInterface
 {
     /**
-     * @var \Opengento\Gdpr\Service\Anonymize\AnonymizeTool
+     * @var \Adexos\Gdpr\Service\Anonymize\AnonymizeTool
      */
     private $anonymizeTool;
 
@@ -33,7 +33,7 @@ final class SubscriberDataProcessor implements ProcessorInterface
     private $subscriberResourceModel;
 
     /**
-     * @param \Opengento\Gdpr\Service\Anonymize\AnonymizeTool $anonymizeTool
+     * @param \Adexos\Gdpr\Service\Anonymize\AnonymizeTool $anonymizeTool
      * @param \Magento\Newsletter\Model\SubscriberFactory $subscriberFactory
      * @param \Magento\Newsletter\Model\ResourceModel\Subscriber $subscriberResourceModel
      */

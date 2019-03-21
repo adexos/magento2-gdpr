@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model\Config\Source;
+namespace Adexos\Gdpr\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 use Magento\Framework\Phrase;
-use Opengento\Gdpr\Model\Config\ErasureComponentStrategy;
+use Adexos\Gdpr\Model\Config\ErasureComponentStrategy;
 
 /**
  * Erasure Components Processors Data Source
@@ -17,7 +17,7 @@ use Opengento\Gdpr\Model\Config\ErasureComponentStrategy;
 class ErasureComponents implements OptionSourceInterface
 {
     /**
-     * @var \Opengento\Gdpr\Model\Config\ErasureComponentStrategy
+     * @var \Adexos\Gdpr\Model\Config\ErasureComponentStrategy
      */
     private $componentStrategy;
 
@@ -27,7 +27,7 @@ class ErasureComponents implements OptionSourceInterface
     private $options;
 
     /**
-     * @param \Opengento\Gdpr\Model\Config\ErasureComponentStrategy $componentStrategy
+     * @param \Adexos\Gdpr\Model\Config\ErasureComponentStrategy $componentStrategy
      */
     public function __construct(
         ErasureComponentStrategy $componentStrategy

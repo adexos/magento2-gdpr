@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Controller\Privacy;
+namespace Adexos\Gdpr\Controller\Privacy;
 
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Context;
@@ -17,10 +17,10 @@ use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\Filesystem;
 use Magento\Framework\Phrase;
-use Opengento\Gdpr\Controller\AbstractPrivacy;
-use Opengento\Gdpr\Model\Config;
-use Opengento\Gdpr\Service\ExportManagement;
-use Opengento\Gdpr\Service\ExportStrategy;
+use Adexos\Gdpr\Controller\AbstractPrivacy;
+use Adexos\Gdpr\Model\Config;
+use Adexos\Gdpr\Service\ExportManagement;
+use Adexos\Gdpr\Service\ExportStrategy;
 
 /**
  * Action Export Export
@@ -43,17 +43,17 @@ class Export extends AbstractPrivacy
     private $filesystem;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
     /**
-     * @var \Opengento\Gdpr\Service\ExportManagement
+     * @var \Adexos\Gdpr\Service\ExportManagement
      */
     private $exportManagement;
 
     /**
-     * @var \Opengento\Gdpr\Service\ExportStrategy
+     * @var \Adexos\Gdpr\Service\ExportStrategy
      */
     private $exportStrategy;
 
@@ -67,9 +67,9 @@ class Export extends AbstractPrivacy
      * @param \Magento\Framework\App\Response\Http\FileFactory $fileFactory
      * @param \Magento\Framework\Archive\ArchiveInterface $archive
      * @param \Magento\Framework\Filesystem $filesystem
-     * @param \Opengento\Gdpr\Model\Config $config
-     * @param \Opengento\Gdpr\Service\ExportManagement $exportManagement
-     * @param \Opengento\Gdpr\Service\ExportStrategy $exportStrategy
+     * @param \Adexos\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Service\ExportManagement $exportManagement
+     * @param \Adexos\Gdpr\Service\ExportStrategy $exportStrategy
      * @param \Magento\Customer\Model\Session $customerSession
      */
     public function __construct(

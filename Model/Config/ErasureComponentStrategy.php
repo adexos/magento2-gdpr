@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model\Config;
+namespace Adexos\Gdpr\Model\Config;
 
 use Magento\Framework\ObjectManager\ConfigInterface;
-use Opengento\Gdpr\Model\Config;
-use Opengento\Gdpr\Service\ErasureStrategy;
+use Adexos\Gdpr\Model\Config;
+use Adexos\Gdpr\Service\ErasureStrategy;
 
 /**
  * Erasure Component Strategy Config Resolver
@@ -22,7 +22,7 @@ class ErasureComponentStrategy
     private $objectManagerConfig;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
@@ -33,7 +33,7 @@ class ErasureComponentStrategy
 
     /**
      * @param \Magento\Framework\ObjectManager\ConfigInterface $objectManagerConfig
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      * @param string[] $componentsStrategies
      */
     public function __construct(
@@ -81,7 +81,7 @@ class ErasureComponentStrategy
      */
     public function getAnonymizeComponentsNames(): array
     {
-        return \array_keys($this->retrieveProcessorNames('Opengento\Gdpr\Service\Anonymize\ProcessorPool'));
+        return \array_keys($this->retrieveProcessorNames('Adexos\Gdpr\Service\Anonymize\ProcessorPool'));
     }
 
     /**
@@ -91,7 +91,7 @@ class ErasureComponentStrategy
      */
     public function getDeleteComponentsNames(): array
     {
-        return \array_keys($this->retrieveProcessorNames('Opengento\Gdpr\Service\Delete\ProcessorPool'));
+        return \array_keys($this->retrieveProcessorNames('Adexos\Gdpr\Service\Delete\ProcessorPool'));
     }
 
     /**

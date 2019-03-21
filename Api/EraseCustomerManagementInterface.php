@@ -4,9 +4,9 @@
  * See LICENSE bundled with this library for license details.
  */
 
-namespace Opengento\Gdpr\Api;
+namespace Adexos\Gdpr\Api;
 
-use Opengento\Gdpr\Api\Data\EraseCustomerInterface;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterface;
 
 /**
  * Interface EraseCustomerManagementInterface
@@ -18,7 +18,7 @@ interface EraseCustomerManagementInterface
      * Initialize and save a new erase customer scheduler for a customer ID
      *
      * @param int $customerId
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      * @throws \Magento\Framework\Exception\CouldNotSaveException
      * @throws \Magento\Framework\Exception\AlreadyExistsException
      */
@@ -38,8 +38,8 @@ interface EraseCustomerManagementInterface
     /**
      * Run and process the erase customer scheduler command
      *
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerInterface $entity
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerInterface $entity
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -56,7 +56,7 @@ interface EraseCustomerManagementInterface
     /**
      * Check if an erase scheduler can be canceled
      *
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerInterface $entity
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerInterface $entity
      * @return bool
      */
     public function canBeCanceled(EraseCustomerInterface $entity): bool;
@@ -64,7 +64,7 @@ interface EraseCustomerManagementInterface
     /**
      * Check if an erase scheduler can be processed
      *
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerInterface $entity
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerInterface $entity
      * @return bool
      */
     public function canBeProcessed(EraseCustomerInterface $entity): bool;

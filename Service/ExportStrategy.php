@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service;
+namespace Adexos\Gdpr\Service;
 
 use Magento\Framework\ObjectManager\TMap;
-use Opengento\Gdpr\Model\Config;
-use Opengento\Gdpr\Service\Export\RendererInterface;
+use Adexos\Gdpr\Model\Config;
+use Adexos\Gdpr\Service\Export\RendererInterface;
 
 /**
  * Class ExportStrategy
@@ -23,18 +23,18 @@ final class ExportStrategy implements RendererInterface
     private $rendererPool;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
     /**
-     * @var \Opengento\Gdpr\Service\Export\RendererInterface
+     * @var \Adexos\Gdpr\Service\Export\RendererInterface
      */
     private $renderer;
 
     /**
      * @param \Magento\Framework\ObjectManager\TMap $rendererPool
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      */
     public function __construct(
         TMap $rendererPool,
@@ -63,7 +63,7 @@ final class ExportStrategy implements RendererInterface
     /**
      * Resolve and retrieve the current renderer
      *
-     * @return \Opengento\Gdpr\Service\Export\RendererInterface
+     * @return \Adexos\Gdpr\Service\Export\RendererInterface
      */
     private function resolveRenderer(): RendererInterface
     {

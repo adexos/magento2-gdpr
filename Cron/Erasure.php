@@ -5,17 +5,17 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Cron;
+namespace Adexos\Gdpr\Cron;
 
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Api\SearchResultsInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Registry;
 use Magento\Framework\Stdlib\DateTime\DateTime;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterface;
-use Opengento\Gdpr\Api\EraseCustomerManagementInterface;
-use Opengento\Gdpr\Api\EraseCustomerRepositoryInterface;
-use Opengento\Gdpr\Model\Config;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterface;
+use Adexos\Gdpr\Api\EraseCustomerManagementInterface;
+use Adexos\Gdpr\Api\EraseCustomerRepositoryInterface;
+use Adexos\Gdpr\Model\Config;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -29,7 +29,7 @@ final class Erasure
     private $logger;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
@@ -39,12 +39,12 @@ final class Erasure
     private $registry;
 
     /**
-     * @var \Opengento\Gdpr\Api\EraseCustomerManagementInterface
+     * @var \Adexos\Gdpr\Api\EraseCustomerManagementInterface
      */
     private $eraseCustomerManagement;
 
     /**
-     * @var \Opengento\Gdpr\Api\EraseCustomerRepositoryInterface
+     * @var \Adexos\Gdpr\Api\EraseCustomerRepositoryInterface
      */
     private $eraseCustomerRepository;
 
@@ -60,10 +60,10 @@ final class Erasure
 
     /**
      * @param \Psr\Log\LoggerInterface $logger
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      * @param \Magento\Framework\Registry $registry
-     * @param \Opengento\Gdpr\Api\EraseCustomerManagementInterface $eraseCustomerManagement
-     * @param \Opengento\Gdpr\Api\EraseCustomerRepositoryInterface $eraseCustomerRepository
+     * @param \Adexos\Gdpr\Api\EraseCustomerManagementInterface $eraseCustomerManagement
+     * @param \Adexos\Gdpr\Api\EraseCustomerRepositoryInterface $eraseCustomerRepository
      * @param \Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $dateTime
      */
@@ -96,7 +96,7 @@ final class Erasure
             $oldValue = $this->registry->registry('isSecureArea');
             $this->registry->register('isSecureArea', true, true);
 
-            /** @var \Opengento\Gdpr\Api\Data\EraseCustomerInterface $eraseCustomer */
+            /** @var \Adexos\Gdpr\Api\Data\EraseCustomerInterface $eraseCustomer */
             foreach ($this->retrieveEraseCustomerList()->getItems() as $eraseCustomer) {
                 try {
                     $this->eraseCustomerManagement->process($eraseCustomer);

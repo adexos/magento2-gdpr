@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\ViewModel\Privacy;
+namespace Adexos\Gdpr\ViewModel\Privacy;
 
 use Magento\Cms\Block\Block;
 use Magento\Customer\Model\Session;
@@ -13,10 +13,10 @@ use Magento\Framework\DataObject;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Magento\Framework\View\Element\BlockFactory;
-use Opengento\Gdpr\Api\EraseCustomerManagementInterface;
-use Opengento\Gdpr\Api\EraseCustomerRepositoryInterface;
-use Opengento\Gdpr\Model\Config;
-use Opengento\Gdpr\Service\ErasureStrategy;
+use Adexos\Gdpr\Api\EraseCustomerManagementInterface;
+use Adexos\Gdpr\Api\EraseCustomerRepositoryInterface;
+use Adexos\Gdpr\Model\Config;
+use Adexos\Gdpr\Service\ErasureStrategy;
 
 /**
  * Class ErasureDataProvider
@@ -24,17 +24,17 @@ use Opengento\Gdpr\Service\ErasureStrategy;
 final class ErasureDataProvider extends DataObject implements ArgumentInterface
 {
     /**
-     * @var \Opengento\Gdpr\Api\EraseCustomerRepositoryInterface
+     * @var \Adexos\Gdpr\Api\EraseCustomerRepositoryInterface
      */
     private $eraseCustomerRepository;
 
     /**
-     * @var \Opengento\Gdpr\Api\EraseCustomerManagementInterface
+     * @var \Adexos\Gdpr\Api\EraseCustomerManagementInterface
      */
     private $eraseCustomerManagement;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
@@ -49,9 +49,9 @@ final class ErasureDataProvider extends DataObject implements ArgumentInterface
     private $blockFactory;
 
     /**
-     * @param \Opengento\Gdpr\Api\EraseCustomerRepositoryInterface $eraseCustomerRepository
-     * @param \Opengento\Gdpr\Api\EraseCustomerManagementInterface $eraseCustomerManagement
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Api\EraseCustomerRepositoryInterface $eraseCustomerRepository
+     * @param \Adexos\Gdpr\Api\EraseCustomerManagementInterface $eraseCustomerManagement
+     * @param \Adexos\Gdpr\Model\Config $config
      * @param \Magento\Customer\Model\Session $session
      * @param \Magento\Framework\View\Element\BlockFactory $blockFactory
      * @param array $data

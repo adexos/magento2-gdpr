@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Export\Renderer;
+namespace Adexos\Gdpr\Service\Export\Renderer;
 
 use Magento\Framework\DataObject;
 use Magento\Framework\Exception\LocalizedException;
@@ -21,7 +21,7 @@ use Magento\Framework\View\LayoutInterface;
 use Magento\Framework\View\Page\Config;
 use Magento\Framework\View\Page\Config\RendererFactory;
 use Magento\Framework\View\Page\Layout\Reader;
-use Opengento\Gdpr\Service\Export\AbstractRenderer;
+use Adexos\Gdpr\Service\Export\AbstractRenderer;
 
 /**
  * Class HtmlRenderer

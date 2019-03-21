@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model\Archive;
+namespace Adexos\Gdpr\Model\Archive;
 
 use Magento\Framework\Archive\ArchiveInterface;
 use Magento\Framework\Archive\Zip as ArchiveZip;

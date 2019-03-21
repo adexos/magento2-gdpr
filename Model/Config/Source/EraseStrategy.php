@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model\Config\Source;
+namespace Adexos\Gdpr\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 use Magento\Framework\Phrase;
-use Opengento\Gdpr\Service\ErasureStrategy;
+use Adexos\Gdpr\Service\ErasureStrategy;
 
 /**
  * Erase Strategy Config Data Source

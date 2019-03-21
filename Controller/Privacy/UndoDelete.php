@@ -5,14 +5,14 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Controller\Privacy;
+namespace Adexos\Gdpr\Controller\Privacy;
 
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Phrase;
-use Opengento\Gdpr\Api\EraseCustomerManagementInterface;
-use Opengento\Gdpr\Controller\AbstractPrivacy;
+use Adexos\Gdpr\Api\EraseCustomerManagementInterface;
+use Adexos\Gdpr\Controller\AbstractPrivacy;
 
 /**
  * Action Undo Delete
@@ -25,14 +25,14 @@ class UndoDelete extends AbstractPrivacy
     private $session;
 
     /**
-     * @var \Opengento\Gdpr\Api\EraseCustomerManagementInterface
+     * @var \Adexos\Gdpr\Api\EraseCustomerManagementInterface
      */
     private $eraseCustomerManagement;
 
     /**
      * @param \Magento\Framework\App\Action\Context $context
      * @param \Magento\Customer\Model\Session $session
-     * @param \Opengento\Gdpr\Api\EraseCustomerManagementInterface $eraseCustomerManagement
+     * @param \Adexos\Gdpr\Api\EraseCustomerManagementInterface $eraseCustomerManagement
      */
     public function __construct(
         Context $context,

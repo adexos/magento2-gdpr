@@ -5,13 +5,13 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Export\Processor;
+namespace Adexos\Gdpr\Service\Export\Processor;
 
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Api\SearchResultsInterface;
 use Magento\Framework\EntityManager\Hydrator;
 use Magento\Quote\Api\CartRepositoryInterface;
-use Opengento\Gdpr\Service\Export\ProcessorInterface;
+use Adexos\Gdpr\Service\Export\ProcessorInterface;
 
 /**
  * Class QuoteDataProcessor

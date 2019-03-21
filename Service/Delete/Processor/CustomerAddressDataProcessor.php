@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Delete\Processor;
+namespace Adexos\Gdpr\Service\Delete\Processor;
 
 use Magento\Customer\Api\AddressRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
-use Opengento\Gdpr\Service\Delete\ProcessorInterface;
+use Adexos\Gdpr\Service\Delete\ProcessorInterface;
 
 /**
  * Class CustomerAddressDataProcessor

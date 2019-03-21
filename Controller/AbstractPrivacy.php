@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Controller;
+namespace Adexos\Gdpr\Controller;
 
 use Magento\Customer\Controller\AbstractAccount;
 use Magento\Framework\Controller\ResultFactory;

@@ -26,7 +26,7 @@ define([
         popupLink: ko.observable(null),
 
         defaults: {
-            template: 'Opengento_Gdpr/message'
+            template: 'Adexos_Gdpr/message'
         },
 
         /**

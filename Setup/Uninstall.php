@@ -5,13 +5,13 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Setup;
+namespace Adexos\Gdpr\Setup;
 
 use Magento\Framework\DB\Adapter\AdapterInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 use Magento\Framework\Setup\UninstallInterface;
-use Opengento\Gdpr\Model\ResourceModel\EraseCustomer;
+use Adexos\Gdpr\Model\ResourceModel\EraseCustomer;
 
 /**
  * Class Uninstall

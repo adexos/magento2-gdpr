@@ -5,13 +5,13 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Console\Command;
+namespace Adexos\Gdpr\Console\Command;
 
 use Magento\Framework\App\Area;
 use Magento\Framework\App\State;
 use Magento\Framework\Console\Cli;
 use Magento\Framework\Registry;
-use Opengento\Gdpr\Service\ErasureStrategy;
+use Adexos\Gdpr\Service\ErasureStrategy;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -39,14 +39,14 @@ final class EraseCommand extends Command
     private $registry;
 
     /**
-     * @var \Opengento\Gdpr\Service\ErasureStrategy
+     * @var \Adexos\Gdpr\Service\ErasureStrategy
      */
     private $erasureStrategy;
 
     /**
      * @param \Magento\Framework\App\State $appState
      * @param \Magento\Framework\Registry $registry
-     * @param \Opengento\Gdpr\Service\ErasureStrategy $erasureStrategy
+     * @param \Adexos\Gdpr\Service\ErasureStrategy $erasureStrategy
      * @param null|string $name
      */
     public function __construct(

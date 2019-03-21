@@ -4,7 +4,7 @@
  * See LICENSE bundled with this library for license details.
  */
 
-namespace Opengento\Gdpr\Api\Data;
+namespace Adexos\Gdpr\Api\Data;
 
 use Magento\Framework\Api\SearchResultsInterface;
 
@@ -17,15 +17,15 @@ interface EraseCustomerSearchResultsInterface extends SearchResultsInterface
     /**
      * Retrieve the erase customer schedulers list
      *
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface[]
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface[]
      */
     public function getItems(): array;
 
     /**
      * Set the erase customer schedulers list
      *
-     * @param \Opengento\Gdpr\Api\Data\EraseCustomerInterface[] $items
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerSearchResultsInterface
+     * @param \Adexos\Gdpr\Api\Data\EraseCustomerInterface[] $items
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerSearchResultsInterface
      */
     public function setItems(array $items): EraseCustomerSearchResultsInterface;
 }

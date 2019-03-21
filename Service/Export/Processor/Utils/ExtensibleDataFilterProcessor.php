@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Export\Processor\Utils;
+namespace Adexos\Gdpr\Service\Export\Processor\Utils;
 
 use Magento\Framework\Api\ExtensibleDataInterface;
 
@@ -15,12 +15,12 @@ use Magento\Framework\Api\ExtensibleDataInterface;
 final class ExtensibleDataFilterProcessor implements DataFilterProcessorInterface
 {
     /**
-     * @var \Opengento\Gdpr\Service\Export\Processor\Utils\DataFilterProcessor
+     * @var \Adexos\Gdpr\Service\Export\Processor\Utils\DataFilterProcessor
      */
     private $dataFilterProcessor;
 
     /**
-     * @param \Opengento\Gdpr\Service\Export\Processor\Utils\DataFilterProcessor $dataFilterProcessor
+     * @param \Adexos\Gdpr\Service\Export\Processor\Utils\DataFilterProcessor $dataFilterProcessor
      */
     public function __construct(
         DataFilterProcessor $dataFilterProcessor

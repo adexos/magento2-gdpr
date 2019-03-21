@@ -26,16 +26,16 @@
         "roave/security-advisories": "dev-master"
     },
     "type": "magento2-module",
-    "version": "3.0.0-Beta1",
+    "version": "3.0.0-beta2",
     "license": [
         "MIT"
     ],
     "homepage": "https://github.com/adexos/magento2-gdpr",
     "authors": [
         {
-            "name": "Opengento Team",
-            "email": "opengento@gmail.com",
-            "homepage": "https://opengento.fr/",
+            "name": "Adexos Team",
+            "email": "odexos@gmail.com",
+            "homepage": "https://odexos.fr/",
             "role": "lead"
         },
         {
@@ -45,8 +45,8 @@
         }
     ],
     "support": {
-        "source": "https://github.com/opengento/magento2-gdpr",
-        "issues": "https://github.com/opengento/magento2-gdpr/issues"
+        "source": "https://github.com/odexos/magento2-gdpr",
+        "issues": "https://github.com/odexos/magento2-gdpr/issues"
     },
     "autoload": {
         "files": [

@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service;
+namespace Adexos\Gdpr\Service;
 
 use Magento\Framework\ObjectManager\TMap;
 
@@ -39,7 +39,7 @@ final class ExportManagement
     {
         $data = [];
 
-        /** @var \Opengento\Gdpr\Service\Export\ProcessorInterface $processor */
+        /** @var \Adexos\Gdpr\Service\Export\ProcessorInterface $processor */
         foreach ($this->processorPool as $processor) {
             $data = $processor->execute($customerId, $data);
         }
@@ -60,7 +60,7 @@ final class ExportManagement
             throw new \InvalidArgumentException(\sprintf('Unknown processor type "%s".', $processorName));
         }
 
-        /** @var \Opengento\Gdpr\Service\Export\ProcessorInterface $processor */
+        /** @var \Adexos\Gdpr\Service\Export\ProcessorInterface $processor */
         $processor = $this->processorPool->offsetGet($processorName);
         return $processor->execute($customerId, []);
     }

@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Export\Renderer;
+namespace Adexos\Gdpr\Service\Export\Renderer;
 
 use Magento\Framework\Filesystem;
 use mikehaertl\wkhtmlto\PdfFactory;
-use Opengento\Gdpr\Service\Export\AbstractRenderer;
+use Adexos\Gdpr\Service\Export\AbstractRenderer;
 
 /**
  * Class PdfRenderer
@@ -22,14 +22,14 @@ final class PdfRenderer extends AbstractRenderer
     private $pdfFactory;
 
     /**
-     * @var \Opengento\Gdpr\Service\Export\Renderer\HtmlRenderer
+     * @var \Adexos\Gdpr\Service\Export\Renderer\HtmlRenderer
      */
     private $htmlRenderer;
 
     /**
      * @param \Magento\Framework\Filesystem $filesystem
      * @param \mikehaertl\wkhtmlto\PdfFactory $pdfFactory
-     * @param \Opengento\Gdpr\Service\Export\Renderer\HtmlRenderer $htmlRenderer
+     * @param \Adexos\Gdpr\Service\Export\Renderer\HtmlRenderer $htmlRenderer
      */
     public function __construct(
         Filesystem $filesystem,

@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Controller\Privacy;
+namespace Adexos\Gdpr\Controller\Privacy;
 
 use Magento\Customer\Model\AuthenticationInterface;
 use Magento\Customer\Model\Session;
@@ -16,8 +16,8 @@ use Magento\Framework\Exception\AlreadyExistsException;
 use Magento\Framework\Exception\InvalidEmailOrPasswordException;
 use Magento\Framework\Exception\State\UserLockedException;
 use Magento\Framework\Phrase;
-use Opengento\Gdpr\Api\EraseCustomerManagementInterface;
-use Opengento\Gdpr\Controller\AbstractPrivacy;
+use Adexos\Gdpr\Api\EraseCustomerManagementInterface;
+use Adexos\Gdpr\Controller\AbstractPrivacy;
 
 /**
  * Action Delete Delete
@@ -40,7 +40,7 @@ class DeletePost extends AbstractPrivacy
     private $session;
 
     /**
-     * @var \Opengento\Gdpr\Api\EraseCustomerManagementInterface
+     * @var \Adexos\Gdpr\Api\EraseCustomerManagementInterface
      */
     private $eraseCustomerManagement;
 
@@ -49,7 +49,7 @@ class DeletePost extends AbstractPrivacy
      * @param \Magento\Framework\Data\Form\FormKey\Validator $formKeyValidator
      * @param \Magento\Customer\Model\AuthenticationInterface $authentication
      * @param \Magento\Customer\Model\Session $session
-     * @param \Opengento\Gdpr\Api\EraseCustomerManagementInterface $eraseCustomerManagement
+     * @param \Adexos\Gdpr\Api\EraseCustomerManagementInterface $eraseCustomerManagement
      */
     public function __construct(
         Context $context,

@@ -5,13 +5,13 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\ViewModel\Privacy;
+namespace Adexos\Gdpr\ViewModel\Privacy;
 
 use Magento\Cms\Block\Block;
 use Magento\Framework\DataObject;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Magento\Framework\View\Element\BlockFactory;
-use Opengento\Gdpr\Model\Config;
+use Adexos\Gdpr\Model\Config;
 
 /**
  * Class SettingsDataProvider
@@ -19,7 +19,7 @@ use Opengento\Gdpr\Model\Config;
 final class SettingsDataProvider extends DataObject implements ArgumentInterface
 {
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
@@ -29,7 +29,7 @@ final class SettingsDataProvider extends DataObject implements ArgumentInterface
     private $blockFactory;
 
     /**
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      * @param \Magento\Framework\View\Element\BlockFactory $blockFactory
      * @param array $data
      */

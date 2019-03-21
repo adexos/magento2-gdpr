@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Controller\Privacy;
+namespace Adexos\Gdpr\Controller\Privacy;
 
 use Magento\Framework\Controller\ResultFactory;
-use Opengento\Gdpr\Controller\AbstractPrivacy;
+use Adexos\Gdpr\Controller\AbstractPrivacy;
 
 /**
  * Action Index Settings

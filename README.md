@@ -1,7 +1,7 @@
 # GDPR Module for Magento 2
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/opengento/module-gdpr.svg?style=flat-square)](https://packagist.org/packages/opengento/module-gdpr)
-[![License: MIT](https://img.shields.io/github/license/opengento/magento2-gdpr.svg?style=flat-square)](./LICENSE) 
+[![Latest Stable Version](https://img.shields.io/packagist/v/odexos/module-gdpr.svg?style=flat-square)](https://packagist.org/packages/odexos/module-gdpr)
+[![License: MIT](https://img.shields.io/github/license/odexos/magento2-gdpr.svg?style=flat-square)](./LICENSE) 
 
 This extension allows customers to delete, anonymize, and export their personal data.
 
@@ -34,12 +34,12 @@ This module does not support Magento `2.0.x`, as this version is not anymore mai
 
 **Zip Package:**
 
-Unzip the package in app/code/Opengento/Gdpr.
+Unzip the package in app/code/Adexos/Gdpr.
 
 **Composer Package:**
 
 ```
-composer require opengento/module-gdpr
+composer require odexos/module-gdpr
 ```
 
 ### Install the module
@@ -98,11 +98,11 @@ The following documentation explains how to add your own processors to the workf
 ### Extends Export
 
 In order to export your custom component, you must create a new processor.  
-To create a new processor, you must implement the following interface: `\Opengento\Gdpr\Service\Export\ProcessorInterface`.  
-Then, register your processor to the following pool `\Opengento\Gdpr\Service\Export\ProcessorPool`, as described:
+To create a new processor, you must implement the following interface: `\Adexos\Gdpr\Service\Export\ProcessorInterface`.  
+Then, register your processor to the following pool `\Adexos\Gdpr\Service\Export\ProcessorPool`, as described:
 
 ```xml
-<type name="Opengento\Gdpr\Service\Export\ProcessorPool">
+<type name="Adexos\Gdpr\Service\Export\ProcessorPool">
     <arguments>
         <argument name="array" xsi:type="array">
             <item name="my_component" xsi:type="string">\Vendor\Module\ExportProcessor</item>
@@ -112,11 +112,11 @@ Then, register your processor to the following pool `\Opengento\Gdpr\Service\Exp
 ```
 
 You can also create your custom export renderer to make it as be like you want to be.  
-To achieve this, you must implement the following interface: `\Opengento\Gdpr\Service\Export\RendererInterface`  
-Then, register your renderer to the following pool `\Opengento\Gdpr\Service\Export\RendererPool`, as described:
+To achieve this, you must implement the following interface: `\Adexos\Gdpr\Service\Export\RendererInterface`  
+Then, register your renderer to the following pool `\Adexos\Gdpr\Service\Export\RendererPool`, as described:
 
 ```xml
-<type name="Opengento\Gdpr\Service\Export\RendererPool">
+<type name="Adexos\Gdpr\Service\Export\RendererPool">
     <arguments>
         <argument name="array" xsi:type="array">
             <item name="my_renderer" xsi:type="string">\Vendor\Module\ExportRenderer</item>
@@ -128,11 +128,11 @@ Then, register your renderer to the following pool `\Opengento\Gdpr\Service\Expo
 ### Extends Deletion
 
 In order to delete your custom component, you must create a new processor.  
-To create a new processor, you must implement the following interface: `\Opengento\Gdpr\Service\Delete\ProcessorInterface`.  
-Then, register your processor to the following pool `\Opengento\Gdpr\Service\Delete\ProcessorPool`, as described:
+To create a new processor, you must implement the following interface: `\Adexos\Gdpr\Service\Delete\ProcessorInterface`.  
+Then, register your processor to the following pool `\Adexos\Gdpr\Service\Delete\ProcessorPool`, as described:
 
 ```xml
-<type name="Opengento\Gdpr\Service\Delete\ProcessorPool">
+<type name="Adexos\Gdpr\Service\Delete\ProcessorPool">
     <arguments>
         <argument name="array" xsi:type="array">
             <item name="my_component" xsi:type="string">\Vendor\Module\DeleteProcessor</item>
@@ -144,11 +144,11 @@ Then, register your processor to the following pool `\Opengento\Gdpr\Service\Del
 ### Extends Anonymization
 
 In order to anonymize your custom component, you must create a new processor.  
-To create a new processor, you must implement the following interface: `\Opengento\Gdpr\Service\Anonymize\ProcessorInterface`.  
-Then, register your processor to the following pool `\Opengento\Gdpr\Service\Anonymize\ProcessorPool`, as described:
+To create a new processor, you must implement the following interface: `\Adexos\Gdpr\Service\Anonymize\ProcessorInterface`.  
+Then, register your processor to the following pool `\Adexos\Gdpr\Service\Anonymize\ProcessorPool`, as described:
 
 ```xml
-<type name="Opengento\Gdpr\Service\Anonymize\ProcessorPool">
+<type name="Adexos\Gdpr\Service\Anonymize\ProcessorPool">
     <arguments>
         <argument name="array" xsi:type="array">
             <item name="my_component" xsi:type="string">\Vendor\Module\AnonymizeProcessor</item>
@@ -165,21 +165,21 @@ define the strategy to apply for them via the `etc/di.xml` file. Be careful, the
 are always checked in top priority. To make it via the code, add your preferences as following:
 
 ```xml
-<type name="Opengento\Gdpr\Model\Config\ErasureComponentStrategy">
+<type name="Adexos\Gdpr\Model\Config\ErasureComponentStrategy">
     <arguments>
         <argument name="componentsStrategies" xsi:type="array">
-            <item name="component_name_1" xsi:type="const">Opengento\Gdpr\Service\ErasureStrategy::STRATEGY_ANONYMIZE</item>        
-            <item name="component_name_2" xsi:type="const">Opengento\Gdpr\Service\ErasureStrategy::STRATEGY_DELETE</item>        
+            <item name="component_name_1" xsi:type="const">Adexos\Gdpr\Service\ErasureStrategy::STRATEGY_ANONYMIZE</item>        
+            <item name="component_name_2" xsi:type="const">Adexos\Gdpr\Service\ErasureStrategy::STRATEGY_DELETE</item>        
             <item name="component_name_3" xsi:type="string">custom_strategy_code</item>        
         </argument>
     </arguments>
 </type>
 ```
 
-Warning, if you want to implement your own strategy type, you must create your own strategy class object, but you will be able to use the `Opengento\Gdpr\Model\Config\ErasureComponentStrategy` to serve your components by strategy.  
+Warning, if you want to implement your own strategy type, you must create your own strategy class object, but you will be able to use the `Adexos\Gdpr\Model\Config\ErasureComponentStrategy` to serve your components by strategy.  
 Do not forget to use the right services managers, but you are free to use yours:  
-- `Opengento\Gdpr\Service\AnonymizeManagement`
-- `Opengento\Gdpr\Service\DeleteManagement`
+- `Adexos\Gdpr\Service\AnonymizeManagement`
+- `Adexos\Gdpr\Service\DeleteManagement`
 
 ### How to override class and methods
 
@@ -235,14 +235,14 @@ Congrats! You have overridden class A without extending it!
 
 ## Support
 
-Raise a new [request](https://github.com/opengento/magento2-gdpr/issues) to the issue tracker.  
+Raise a new [request](https://github.com/odexos/magento2-gdpr/issues) to the issue tracker.  
 Please provide your Magento 2 version and the module version. Explain how to reproduce your issue and what's expected.
 
 ## Authors
 
 - **Initial Inspiration** - *`Cookie PopUp` sources* - [flurrybox](https://github.com/flurrybox)
-- **Opengento Community** - *Lead* - [They're awesome!](https://github.com/opengento)
-- **Contributors** - *Contributor* - [Many thanks!](https://github.com/opengento/magento2-gdpr/graphs/contributors)
+- **Adexos Community** - *Lead* - [They're awesome!](https://github.com/odexos)
+- **Contributors** - *Contributor* - [Many thanks!](https://github.com/odexos/magento2-gdpr/graphs/contributors)
 
 ## Similar Magento 2 GDPR Module
 

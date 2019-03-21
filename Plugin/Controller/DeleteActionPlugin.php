@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Plugin\Controller;
+namespace Adexos\Gdpr\Plugin\Controller;
 
 use Magento\Framework\Controller\ResultInterface;
-use Opengento\Gdpr\Controller\AbstractPrivacy;
-use Opengento\Gdpr\Model\Config;
+use Adexos\Gdpr\Controller\AbstractPrivacy;
+use Adexos\Gdpr\Model\Config;
 
 /**
  * Class DeleteActionPlugin
@@ -17,12 +17,12 @@ use Opengento\Gdpr\Model\Config;
 final class DeleteActionPlugin
 {
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
     /**
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      */
     public function __construct(
         Config $config
@@ -33,7 +33,7 @@ final class DeleteActionPlugin
     /**
      * Check if the module is enabled for the current scope
      *
-     * @param \Opengento\Gdpr\Controller\AbstractPrivacy $subject
+     * @param \Adexos\Gdpr\Controller\AbstractPrivacy $subject
      * @param callable $proceed
      * @param array ...$args
      * @return \Magento\Framework\Controller\ResultInterface

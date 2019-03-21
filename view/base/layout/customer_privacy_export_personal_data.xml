@@ -12,8 +12,8 @@
     </head>
     <body>
         <referenceContainer name="main">
-            <block class="Magento\Framework\View\Element\Template" name="main.content.customer.privacy.export.personal.data" template="Opengento_Gdpr::export/result.phtml" cacheable="false"/>
+            <block class="Magento\Framework\View\Element\Template" name="main.content.customer.privacy.export.personal.data" template="Adexos_Gdpr::export/result.phtml" cacheable="false"/>
         </referenceContainer>
     </body>
-    <move element="opengento.gdpr.customer.privacy.export.renderers" destination="main.content.customer.privacy.export.personal.data" as="exportRenderer"/>
+    <move element="odexos.gdpr.customer.privacy.export.renderers" destination="main.content.customer.privacy.export.personal.data" as="exportRenderer"/>
 </page>

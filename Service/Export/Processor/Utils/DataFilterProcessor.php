@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Export\Processor\Utils;
+namespace Adexos\Gdpr\Service\Export\Processor\Utils;
 
 /**
  * Class DataFilterProcessor

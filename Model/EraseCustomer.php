@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model;
+namespace Adexos\Gdpr\Model;
 
 use Magento\Framework\Model\AbstractExtensibleModel;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterface;
-use Opengento\Gdpr\Model\ResourceModel\EraseCustomer as EraseCustomerResource;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterface;
+use Adexos\Gdpr\Model\ResourceModel\EraseCustomer as EraseCustomerResource;
 
 /**
  * Erase Customer Model

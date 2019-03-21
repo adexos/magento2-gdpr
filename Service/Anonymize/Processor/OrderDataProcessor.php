@@ -5,15 +5,15 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Anonymize\Processor;
+namespace Adexos\Gdpr\Service\Anonymize\Processor;
 
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Math\Random;
 use Magento\Sales\Api\Data\OrderInterface;
 use Magento\Sales\Model\Order\AddressRepository;
 use Magento\Sales\Model\OrderRepository;
-use Opengento\Gdpr\Service\Anonymize\AnonymizeTool;
-use Opengento\Gdpr\Service\Anonymize\ProcessorInterface;
+use Adexos\Gdpr\Service\Anonymize\AnonymizeTool;
+use Adexos\Gdpr\Service\Anonymize\ProcessorInterface;
 
 /**
  * Class OrderDataProcessor
@@ -21,7 +21,7 @@ use Opengento\Gdpr\Service\Anonymize\ProcessorInterface;
 final class OrderDataProcessor implements ProcessorInterface
 {
     /**
-     * @var \Opengento\Gdpr\Service\Anonymize\AnonymizeTool
+     * @var \Adexos\Gdpr\Service\Anonymize\AnonymizeTool
      */
     private $anonymizeTool;
 
@@ -41,7 +41,7 @@ final class OrderDataProcessor implements ProcessorInterface
     private $searchCriteriaBuilder;
 
     /**
-     * @param \Opengento\Gdpr\Service\Anonymize\AnonymizeTool $anonymizeTool
+     * @param \Adexos\Gdpr\Service\Anonymize\AnonymizeTool $anonymizeTool
      * @param \Magento\Sales\Model\OrderRepository $orderRepository
      * @param \Magento\Sales\Model\Order\AddressRepository $orderAddressRepository
      * @param \Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder

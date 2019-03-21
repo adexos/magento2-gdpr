@@ -5,15 +5,15 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Setup;
+namespace Adexos\Gdpr\Setup;
 
 use Magento\Framework\DB\Adapter\AdapterInterface;
 use Magento\Framework\DB\Ddl\Table;
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterface;
-use Opengento\Gdpr\Model\ResourceModel\EraseCustomer;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterface;
+use Adexos\Gdpr\Model\ResourceModel\EraseCustomer;
 
 /**
  * Module install schema.
@@ -34,7 +34,7 @@ final class InstallSchema implements InstallSchemaInterface
     }
 
     /**
-     * Create table 'opengento_gdpr_erase_customer'
+     * Create table 'odexos_gdpr_erase_customer'
      *
      * @param \Magento\Framework\Setup\SchemaSetupInterface $setup
      * @return bool

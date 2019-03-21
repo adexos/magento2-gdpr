@@ -8,12 +8,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="before.body.end">
-            <block class="Opengento\Gdpr\Block\Messages\PrivacyMessagePopup" name="privacy_message_popup" after="-" ifconfig="gdpr/general/enabled">
+            <block class="Adexos\Gdpr\Block\Messages\PrivacyMessagePopup" name="privacy_message_popup" after="-" ifconfig="gdpr/general/enabled">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="components" xsi:type="array">
                             <item name="enhanced-privacy-cookie-policy" xsi:type="array">
-                                <item name="component" xsi:type="string">Opengento_Gdpr/js/view/popup</item>
+                                <item name="component" xsi:type="string">Adexos_Gdpr/js/view/popup</item>
                                 <item name="displayArea" xsi:type="string">enhanced-privacy-cookie-policy</item>
                             </item>
                         </item>

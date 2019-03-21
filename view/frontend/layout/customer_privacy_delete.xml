@@ -17,10 +17,10 @@
             </arguments>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="customer-account-privacy-delete" template="Opengento_Gdpr::account/delete.phtml" ifconfig="gdpr/erasure/enabled" cacheable="false">
+            <block class="Magento\Framework\View\Element\Template" name="customer-account-privacy-delete" template="Adexos_Gdpr::account/delete.phtml" ifconfig="gdpr/erasure/enabled" cacheable="false">
                 <arguments>
-                    <argument name="settingsDataProvider" xsi:type="object">Opengento\Gdpr\ViewModel\Privacy\SettingsDataProvider</argument>
-                    <argument name="urlsDataProvider" xsi:type="object">Opengento\Gdpr\ViewModel\UrlsDataProvider</argument>
+                    <argument name="settingsDataProvider" xsi:type="object">Adexos\Gdpr\ViewModel\Privacy\SettingsDataProvider</argument>
+                    <argument name="urlsDataProvider" xsi:type="object">Adexos\Gdpr\ViewModel\UrlsDataProvider</argument>
                 </arguments>
             </block>
         </referenceContainer>

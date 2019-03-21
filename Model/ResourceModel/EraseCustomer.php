@@ -5,17 +5,17 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model\ResourceModel;
+namespace Adexos\Gdpr\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
-use Opengento\Gdpr\Api\Data\EraseCustomerInterface;
+use Adexos\Gdpr\Api\Data\EraseCustomerInterface;
 
 /**
  * Erase Customer Scheduler Resource Model
  */
 final class EraseCustomer extends AbstractDb
 {
-    public const TABLE = 'opengento_gdpr_erase_customer';
+    public const TABLE = 'odexos_gdpr_erase_customer';
 
     /**
      * {@inheritdoc}

@@ -4,7 +4,7 @@
  * See LICENSE bundled with this library for license details.
  */
 
-namespace Opengento\Gdpr\Service\Delete;
+namespace Adexos\Gdpr\Service\Delete;
 
 /**
  * Interface ProcessorInterface

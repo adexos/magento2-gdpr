@@ -5,13 +5,13 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Console\Command;
+namespace Adexos\Gdpr\Console\Command;
 
 use Magento\Framework\App\Area;
 use Magento\Framework\App\State;
 use Magento\Framework\Console\Cli;
-use Opengento\Gdpr\Service\ExportManagement;
-use Opengento\Gdpr\Service\ExportStrategy;
+use Adexos\Gdpr\Service\ExportManagement;
+use Adexos\Gdpr\Service\ExportStrategy;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -20,7 +20,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class ExportCommand
- * @package Opengento\Gdpr\Console\Command
+ * @package Adexos\Gdpr\Console\Command
  */
 final class ExportCommand extends Command
 {
@@ -37,19 +37,19 @@ final class ExportCommand extends Command
     private $appState;
 
     /**
-     * @var \Opengento\Gdpr\Service\ExportManagement
+     * @var \Adexos\Gdpr\Service\ExportManagement
      */
     private $exportManagement;
 
     /**
-     * @var \Opengento\Gdpr\Service\ExportStrategy
+     * @var \Adexos\Gdpr\Service\ExportStrategy
      */
     private $exportStrategy;
 
     /**
      * @param \Magento\Framework\App\State $appState
-     * @param \Opengento\Gdpr\Service\ExportManagement $exportManagement
-     * @param \Opengento\Gdpr\Service\ExportStrategy $exportStrategy
+     * @param \Adexos\Gdpr\Service\ExportManagement $exportManagement
+     * @param \Adexos\Gdpr\Service\ExportStrategy $exportStrategy
      * @param null|string $name
      */
     public function __construct(

@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Export\Processor\Utils;
+namespace Adexos\Gdpr\Service\Export\Processor\Utils;
 
 use Magento\Framework\ObjectManager\TMap;
 
@@ -35,7 +35,7 @@ final class CompositeDataFilterProcessor implements DataFilterProcessorInterface
     {
         $result = [];
 
-        /** @var \Opengento\Gdpr\Service\Export\Processor\Utils\DataFilterProcessorInterface $processor */
+        /** @var \Adexos\Gdpr\Service\Export\Processor\Utils\DataFilterProcessorInterface $processor */
         foreach ($this->processorPool->getIterator() as $processor) {
             $result[] = $processor->execute($scheme, $data);
         }

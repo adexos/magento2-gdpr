@@ -7,127 +7,127 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <!-- Service Contract -->
-    <preference for="Opengento\Gdpr\Api\Data\EraseCustomerInterface" type="Opengento\Gdpr\Model\EraseCustomer" />
-    <preference for="Opengento\Gdpr\Api\Data\EraseCustomerSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
-    <preference for="Opengento\Gdpr\Api\EraseCustomerRepositoryInterface" type="Opengento\Gdpr\Model\EraseCustomerRepository" />
-    <preference for="Opengento\Gdpr\Api\EraseCustomerManagementInterface" type="Opengento\Gdpr\Model\EraseCustomerManagement" />
+    <preference for="Adexos\Gdpr\Api\Data\EraseCustomerInterface" type="Adexos\Gdpr\Model\EraseCustomer" />
+    <preference for="Adexos\Gdpr\Api\Data\EraseCustomerSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    <preference for="Adexos\Gdpr\Api\EraseCustomerRepositoryInterface" type="Adexos\Gdpr\Model\EraseCustomerRepository" />
+    <preference for="Adexos\Gdpr\Api\EraseCustomerManagementInterface" type="Adexos\Gdpr\Model\EraseCustomerManagement" />
     <type name="Magento\Framework\Model\Entity\RepositoryFactory">
         <arguments>
             <argument name="entities" xsi:type="array">
-                <item name="Opengento\Gdpr\Api\Data\EraseCustomerInterface" xsi:type="string">Opengento\Gdpr\Api\EraseCustomerRepositoryInterface</item>
+                <item name="Adexos\Gdpr\Api\Data\EraseCustomerInterface" xsi:type="string">Adexos\Gdpr\Api\EraseCustomerRepositoryInterface</item>
             </argument>
         </arguments>
     </type>
     <!-- Anonymize Management -->
-    <virtualType name="Opengento\Gdpr\Service\Anonymize\ProcessorPool" type="Magento\Framework\ObjectManager\TMap">
+    <virtualType name="Adexos\Gdpr\Service\Anonymize\ProcessorPool" type="Magento\Framework\ObjectManager\TMap">
         <arguments>
-            <argument name="type" xsi:type="string">Opengento\Gdpr\Service\Anonymize\ProcessorInterface</argument>
+            <argument name="type" xsi:type="string">Adexos\Gdpr\Service\Anonymize\ProcessorInterface</argument>
             <argument name="array" xsi:type="array">
-                <item name="customer" xsi:type="string">Opengento\Gdpr\Service\Anonymize\Processor\CustomerDataProcessor</item>
-                <item name="customer_address" xsi:type="string">Opengento\Gdpr\Service\Anonymize\Processor\CustomerAddressDataProcessor</item>
-                <item name="quote" xsi:type="string">Opengento\Gdpr\Service\Anonymize\Processor\QuoteDataProcessor</item>
-                <item name="order" xsi:type="string">Opengento\Gdpr\Service\Anonymize\Processor\OrderDataProcessor</item>
-                <item name="subscriber" xsi:type="string">Opengento\Gdpr\Service\Anonymize\Processor\SubscriberDataProcessor</item>
+                <item name="customer" xsi:type="string">Adexos\Gdpr\Service\Anonymize\Processor\CustomerDataProcessor</item>
+                <item name="customer_address" xsi:type="string">Adexos\Gdpr\Service\Anonymize\Processor\CustomerAddressDataProcessor</item>
+                <item name="quote" xsi:type="string">Adexos\Gdpr\Service\Anonymize\Processor\QuoteDataProcessor</item>
+                <item name="order" xsi:type="string">Adexos\Gdpr\Service\Anonymize\Processor\OrderDataProcessor</item>
+                <item name="subscriber" xsi:type="string">Adexos\Gdpr\Service\Anonymize\Processor\SubscriberDataProcessor</item>
             </argument>
         </arguments>
     </virtualType>
-    <type name="Opengento\Gdpr\Service\AnonymizeManagement">
+    <type name="Adexos\Gdpr\Service\AnonymizeManagement">
         <arguments>
-            <argument name="processorPool" xsi:type="object">Opengento\Gdpr\Service\Anonymize\ProcessorPool</argument>
+            <argument name="processorPool" xsi:type="object">Adexos\Gdpr\Service\Anonymize\ProcessorPool</argument>
         </arguments>
     </type>
     <!-- Delete Management -->
-    <virtualType name="Opengento\Gdpr\Service\Delete\ProcessorPool" type="Magento\Framework\ObjectManager\TMap">
+    <virtualType name="Adexos\Gdpr\Service\Delete\ProcessorPool" type="Magento\Framework\ObjectManager\TMap">
         <arguments>
-            <argument name="type" xsi:type="string">Opengento\Gdpr\Service\Delete\ProcessorInterface</argument>
+            <argument name="type" xsi:type="string">Adexos\Gdpr\Service\Delete\ProcessorInterface</argument>
             <argument name="array" xsi:type="array">
-                <item name="customer" xsi:type="string">Opengento\Gdpr\Service\Delete\Processor\CustomerDataProcessor</item>
-                <item name="customer_address" xsi:type="string">Opengento\Gdpr\Service\Delete\Processor\CustomerAddressDataProcessor</item>
-                <item name="quote" xsi:type="string">Opengento\Gdpr\Service\Delete\Processor\QuoteDataProcessor</item>
-                <item name="order" xsi:type="string">Opengento\Gdpr\Service\Delete\Processor\OrderDataProcessor</item>
-                <item name="subscriber" xsi:type="string">Opengento\Gdpr\Service\Delete\Processor\SubscriberDataProcessor</item>
+                <item name="customer" xsi:type="string">Adexos\Gdpr\Service\Delete\Processor\CustomerDataProcessor</item>
+                <item name="customer_address" xsi:type="string">Adexos\Gdpr\Service\Delete\Processor\CustomerAddressDataProcessor</item>
+                <item name="quote" xsi:type="string">Adexos\Gdpr\Service\Delete\Processor\QuoteDataProcessor</item>
+                <item name="order" xsi:type="string">Adexos\Gdpr\Service\Delete\Processor\OrderDataProcessor</item>
+                <item name="subscriber" xsi:type="string">Adexos\Gdpr\Service\Delete\Processor\SubscriberDataProcessor</item>
             </argument>
         </arguments>
     </virtualType>
-    <type name="Opengento\Gdpr\Service\DeleteManagement">
+    <type name="Adexos\Gdpr\Service\DeleteManagement">
         <arguments>
-            <argument name="processorPool" xsi:type="object">Opengento\Gdpr\Service\Delete\ProcessorPool</argument>
+            <argument name="processorPool" xsi:type="object">Adexos\Gdpr\Service\Delete\ProcessorPool</argument>
         </arguments>
     </type>
     <!-- Export Management -->
-    <virtualType name="Opengento\Gdpr\Service\Export\ProcessorPool" type="Magento\Framework\ObjectManager\TMap">
+    <virtualType name="Adexos\Gdpr\Service\Export\ProcessorPool" type="Magento\Framework\ObjectManager\TMap">
         <arguments>
-            <argument name="type" xsi:type="string">Opengento\Gdpr\Service\Export\Processor\Utils\DataFilterProcessorInterface</argument>
+            <argument name="type" xsi:type="string">Adexos\Gdpr\Service\Export\Processor\Utils\DataFilterProcessorInterface</argument>
             <argument name="array" xsi:type="array">
-                <item name="data_filter" xsi:type="object">Opengento\Gdpr\Service\Export\Processor\Utils\DataFilterProcessor</item>
-                <item name="custom_attributes" xsi:type="object">Opengento\Gdpr\Service\Export\Processor\Utils\CustomAttributesFilterProcessor</item>
-                <item name="extensible_data" xsi:type="object">Opengento\Gdpr\Service\Export\Processor\Utils\ExtensibleDataFilterProcessor</item>
+                <item name="data_filter" xsi:type="object">Adexos\Gdpr\Service\Export\Processor\Utils\DataFilterProcessor</item>
+                <item name="custom_attributes" xsi:type="object">Adexos\Gdpr\Service\Export\Processor\Utils\CustomAttributesFilterProcessor</item>
+                <item name="extensible_data" xsi:type="object">Adexos\Gdpr\Service\Export\Processor\Utils\ExtensibleDataFilterProcessor</item>
             </argument>
         </arguments>
     </virtualType>
-    <type name="Opengento\Gdpr\Service\Export\Processor\Utils\CompositeDataFilterProcessor">
+    <type name="Adexos\Gdpr\Service\Export\Processor\Utils\CompositeDataFilterProcessor">
         <arguments>
-            <argument name="processorPool" xsi:type="object">Opengento\Gdpr\Service\Export\ProcessorPool</argument>
+            <argument name="processorPool" xsi:type="object">Adexos\Gdpr\Service\Export\ProcessorPool</argument>
         </arguments>
     </type>
-    <virtualType name="Opengento\Gdpr\Service\Export\ProcessorPool" type="Magento\Framework\ObjectManager\TMap">
+    <virtualType name="Adexos\Gdpr\Service\Export\ProcessorPool" type="Magento\Framework\ObjectManager\TMap">
         <arguments>
-            <argument name="type" xsi:type="string">Opengento\Gdpr\Service\Export\ProcessorInterface</argument>
+            <argument name="type" xsi:type="string">Adexos\Gdpr\Service\Export\ProcessorInterface</argument>
             <argument name="array" xsi:type="array">
-                <item name="customer_data" xsi:type="string">Opengento\Gdpr\Service\Export\Processor\CustomerDataProcessor</item>
-                <item name="customer_address_data" xsi:type="string">Opengento\Gdpr\Service\Export\Processor\CustomerAddressDataProcessor</item>
-                <item name="quote" xsi:type="string">Opengento\Gdpr\Service\Export\Processor\QuoteDataProcessor</item>
-                <item name="order" xsi:type="string">Opengento\Gdpr\Service\Export\Processor\OrderDataProcessor</item>
-                <item name="subscriber" xsi:type="string">Opengento\Gdpr\Service\Export\Processor\SubscriberDataProcessor</item>
+                <item name="customer_data" xsi:type="string">Adexos\Gdpr\Service\Export\Processor\CustomerDataProcessor</item>
+                <item name="customer_address_data" xsi:type="string">Adexos\Gdpr\Service\Export\Processor\CustomerAddressDataProcessor</item>
+                <item name="quote" xsi:type="string">Adexos\Gdpr\Service\Export\Processor\QuoteDataProcessor</item>
+                <item name="order" xsi:type="string">Adexos\Gdpr\Service\Export\Processor\OrderDataProcessor</item>
+                <item name="subscriber" xsi:type="string">Adexos\Gdpr\Service\Export\Processor\SubscriberDataProcessor</item>
             </argument>
         </arguments>
     </virtualType>
-    <type name="Opengento\Gdpr\Service\ExportManagement">
+    <type name="Adexos\Gdpr\Service\ExportManagement">
         <arguments>
-            <argument name="processorPool" xsi:type="object">Opengento\Gdpr\Service\Export\ProcessorPool</argument>
+            <argument name="processorPool" xsi:type="object">Adexos\Gdpr\Service\Export\ProcessorPool</argument>
         </arguments>
     </type>
     <!-- Export Strategy -->
-    <type name="Opengento\Gdpr\Service\Export\Renderer\HtmlRenderer">
+    <type name="Adexos\Gdpr\Service\Export\Renderer\HtmlRenderer">
         <arguments>
             <argument name="layoutReaderPool" xsi:type="object">pageConfigRenderPool</argument>
             <argument name="layoutGeneratorPool" xsi:type="object">pageLayoutGeneratorPool</argument>
             <argument name="template" xsi:type="string">Magento_Theme::root.phtml</argument>
         </arguments>
     </type>
-    <virtualType name="Opengento\Gdpr\Service\Export\RendererPool" type="Magento\Framework\ObjectManager\TMap">
+    <virtualType name="Adexos\Gdpr\Service\Export\RendererPool" type="Magento\Framework\ObjectManager\TMap">
         <arguments>
-            <argument name="type" xsi:type="string">Opengento\Gdpr\Service\Export\RendererInterface</argument>
+            <argument name="type" xsi:type="string">Adexos\Gdpr\Service\Export\RendererInterface</argument>
             <argument name="array" xsi:type="array">
-                <item name="json" xsi:type="string">Opengento\Gdpr\Service\Export\Renderer\JsonRenderer</item>
-                <item name="csv" xsi:type="string">Opengento\Gdpr\Service\Export\Renderer\CsvRenderer</item>
-                <item name="xml" xsi:type="string">Opengento\Gdpr\Service\Export\Renderer\XmlRenderer</item>
-                <item name="html" xsi:type="string">Opengento\Gdpr\Service\Export\Renderer\HtmlRenderer</item>
-                <item name="pdf" xsi:type="string">Opengento\Gdpr\Service\Export\Renderer\PdfRenderer</item>
+                <item name="json" xsi:type="string">Adexos\Gdpr\Service\Export\Renderer\JsonRenderer</item>
+                <item name="csv" xsi:type="string">Adexos\Gdpr\Service\Export\Renderer\CsvRenderer</item>
+                <item name="xml" xsi:type="string">Adexos\Gdpr\Service\Export\Renderer\XmlRenderer</item>
+                <item name="html" xsi:type="string">Adexos\Gdpr\Service\Export\Renderer\HtmlRenderer</item>
+                <item name="pdf" xsi:type="string">Adexos\Gdpr\Service\Export\Renderer\PdfRenderer</item>
             </argument>
         </arguments>
     </virtualType>
-    <type name="Opengento\Gdpr\Service\ExportStrategy">
+    <type name="Adexos\Gdpr\Service\ExportStrategy">
         <arguments>
-            <argument name="rendererPool" xsi:type="object">Opengento\Gdpr\Service\Export\RendererPool</argument>
+            <argument name="rendererPool" xsi:type="object">Adexos\Gdpr\Service\Export\RendererPool</argument>
         </arguments>
     </type>
     <!-- Console Commands -->
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="gdpr_customer_erase" xsi:type="object">Opengento\Gdpr\Console\Command\EraseCommand</item>
-                <item name="gdpr_customer_export" xsi:type="object">Opengento\Gdpr\Console\Command\ExportCommand</item>
+                <item name="gdpr_customer_erase" xsi:type="object">Adexos\Gdpr\Console\Command\EraseCommand</item>
+                <item name="gdpr_customer_export" xsi:type="object">Adexos\Gdpr\Console\Command\ExportCommand</item>
             </argument>
         </arguments>
     </type>
     <!-- Config Settings -->
-    <virtualType name="Opengento\Gdpr\Model\Config\Source\CustomerAttributes" type="Opengento\Gdpr\Model\Config\Source\VirtualCustomerAttributes">
+    <virtualType name="Adexos\Gdpr\Model\Config\Source\CustomerAttributes" type="Adexos\Gdpr\Model\Config\Source\VirtualCustomerAttributes">
         <arguments>
             <argument name="metadata" xsi:type="object">Magento\Customer\Api\CustomerMetadataInterface</argument>
         </arguments>
     </virtualType>
-    <virtualType name="Opengento\Gdpr\Model\Config\Source\CustomerAddressAttributes" type="Opengento\Gdpr\Model\Config\Source\VirtualCustomerAttributes">
+    <virtualType name="Adexos\Gdpr\Model\Config\Source\CustomerAddressAttributes" type="Adexos\Gdpr\Model\Config\Source\VirtualCustomerAttributes">
         <arguments>
             <argument name="metadata" xsi:type="object">Magento\Customer\Api\AddressMetadataInterface</argument>
         </arguments>

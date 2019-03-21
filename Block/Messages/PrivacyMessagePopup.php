@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Block\Messages;
+namespace Adexos\Gdpr\Block\Messages;
 
 use Magento\Cms\Block\Block;
 use Magento\Cms\Helper\Page as HelperPage;
@@ -13,7 +13,7 @@ use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Serialize\Serializer\Json;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-use Opengento\Gdpr\Model\Config;
+use Adexos\Gdpr\Model\Config;
 
 /**
  * Class PrivacyMessagePopup
@@ -23,7 +23,7 @@ class PrivacyMessagePopup extends Template
     public const COOKIE_NAME = 'cookies-policy';
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
@@ -39,7 +39,7 @@ class PrivacyMessagePopup extends Template
 
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      * @param \Magento\Cms\Helper\Page $helperPage
      * @param \Magento\Framework\Serialize\Serializer\Json $jsonSerializer
      * @param array $data
@@ -50,7 +50,7 @@ class PrivacyMessagePopup extends Template
         HelperPage $helperPage,
         Json $jsonSerializer,
         array $data = [
-            'template' => 'Opengento_Gdpr::messages/popup.phtml',
+            'template' => 'Adexos_Gdpr::messages/popup.phtml',
         ]
     ) {
         $this->config = $config;
@@ -92,7 +92,7 @@ class PrivacyMessagePopup extends Template
             try {
                 $block = $this->getLayout()->createBlock(
                     Block::class,
-                    'opengento.gdpr.cookie.disclosure.information',
+                    'odexos.gdpr.cookie.disclosure.information',
                     ['data' => ['block_id' => $this->config->getCookieDisclosureInformationBlockId()]]
                 );
                 $this->setData('cookie_disclosure_information', $block->toHtml());

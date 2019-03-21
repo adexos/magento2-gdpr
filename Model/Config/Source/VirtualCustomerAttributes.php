@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Model\Config\Source;
+namespace Adexos\Gdpr\Model\Config\Source;
 
 use Magento\Customer\Api\MetadataInterface;
 use Magento\Framework\Data\OptionSourceInterface;

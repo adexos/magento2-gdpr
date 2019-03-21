@@ -5,17 +5,17 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Anonymize\Processor;
+namespace Adexos\Gdpr\Service\Anonymize\Processor;
 
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Sales\Api\Data\OrderInterface;
 use Magento\Sales\Api\OrderRepositoryInterface;
-use Opengento\Gdpr\Model\Config;
-use Opengento\Gdpr\Service\Anonymize\AccountBlocker;
-use Opengento\Gdpr\Service\Anonymize\AnonymizeTool;
-use Opengento\Gdpr\Service\Anonymize\ProcessorInterface;
+use Adexos\Gdpr\Model\Config;
+use Adexos\Gdpr\Service\Anonymize\AccountBlocker;
+use Adexos\Gdpr\Service\Anonymize\AnonymizeTool;
+use Adexos\Gdpr\Service\Anonymize\ProcessorInterface;
 
 /**
  * Class CustomerDataProcessor
@@ -23,12 +23,12 @@ use Opengento\Gdpr\Service\Anonymize\ProcessorInterface;
 final class CustomerDataProcessor implements ProcessorInterface
 {
     /**
-     * @var \Opengento\Gdpr\Service\Anonymize\AnonymizeTool
+     * @var \Adexos\Gdpr\Service\Anonymize\AnonymizeTool
      */
     private $anonymizeTool;
 
     /**
-     * @var \Opengento\Gdpr\Service\Anonymize\AccountBlocker
+     * @var \Adexos\Gdpr\Service\Anonymize\AccountBlocker
      */
     private $accountBlocker;
 
@@ -48,17 +48,17 @@ final class CustomerDataProcessor implements ProcessorInterface
     private $searchCriteriaBuilder;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
     /**
-     * @param \Opengento\Gdpr\Service\Anonymize\AnonymizeTool $anonymizeTool
-     * @param \Opengento\Gdpr\Service\Anonymize\AccountBlocker $accountBlocker
+     * @param \Adexos\Gdpr\Service\Anonymize\AnonymizeTool $anonymizeTool
+     * @param \Adexos\Gdpr\Service\Anonymize\AccountBlocker $accountBlocker
      * @param \Magento\Customer\Api\CustomerRepositoryInterface $customerRepository
      * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
      * @param \Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      */
     public function __construct(
         AnonymizeTool $anonymizeTool,

@@ -11,15 +11,15 @@
             <class>separator-top</class>
             <label>Customer Privacy (GDPR)</label>
             <tab>customer</tab>
-            <resource>Opengento_Gdpr::settings</resource>
+            <resource>Adexos_Gdpr::settings</resource>
             <!-- Global Settings -->
-            <include path="Opengento_Gdpr::system/general.xml" />
+            <include path="Adexos_Gdpr::system/general.xml" />
             <!-- Erasure Settings -->
-            <include path="Opengento_Gdpr::system/erasure.xml" />
+            <include path="Adexos_Gdpr::system/erasure.xml" />
             <!-- Export Settings -->
-            <include path="Opengento_Gdpr::system/export.xml" />
+            <include path="Adexos_Gdpr::system/export.xml" />
             <!-- Cookie Settings -->
-            <include path="Opengento_Gdpr::system/cookie.xml" />
+            <include path="Adexos_Gdpr::system/cookie.xml" />
         </section>
     </system>
 </config>

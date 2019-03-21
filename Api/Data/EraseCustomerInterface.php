@@ -4,7 +4,7 @@
  * See LICENSE bundled with this library for license details.
  */
 
-namespace Opengento\Gdpr\Api\Data;
+namespace Adexos\Gdpr\Api\Data;
 
 use Magento\Framework\Api\ExtensibleDataInterface;
 
@@ -53,7 +53,7 @@ interface EraseCustomerInterface extends ExtensibleDataInterface
      * Set the entity ID
      *
      * @param int $entityId
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      */
     public function setEntityId($entityId): EraseCustomerInterface;
 
@@ -68,7 +68,7 @@ interface EraseCustomerInterface extends ExtensibleDataInterface
      * Set the customer ID
      *
      * @param int $customerId
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      */
     public function setCustomerId(int $customerId): EraseCustomerInterface;
 
@@ -83,7 +83,7 @@ interface EraseCustomerInterface extends ExtensibleDataInterface
      * Set the schedule at
      *
      * @param string $scheduledAt
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      */
     public function setScheduledAt(string $scheduledAt): EraseCustomerInterface;
 
@@ -98,7 +98,7 @@ interface EraseCustomerInterface extends ExtensibleDataInterface
      * Set the state
      *
      * @param string $state
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      */
     public function setState(string $state): EraseCustomerInterface;
 
@@ -113,7 +113,7 @@ interface EraseCustomerInterface extends ExtensibleDataInterface
      * Set the status
      *
      * @param string $status
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      */
     public function setStatus(string $status): EraseCustomerInterface;
 
@@ -128,7 +128,7 @@ interface EraseCustomerInterface extends ExtensibleDataInterface
      * Set the erased at
      *
      * @param string $erasedAt
-     * @return \Opengento\Gdpr\Api\Data\EraseCustomerInterface
+     * @return \Adexos\Gdpr\Api\Data\EraseCustomerInterface
      */
     public function setErasedAt(string $erasedAt): EraseCustomerInterface;
 }

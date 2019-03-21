@@ -5,14 +5,14 @@
  */
 declare(strict_types=1);
 
-namespace Opengento\Gdpr\Service\Export\Processor;
+namespace Adexos\Gdpr\Service\Export\Processor;
 
 use Magento\Customer\Api\AddressRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Api\SearchResultsInterface;
 use Magento\Framework\EntityManager\Hydrator;
-use Opengento\Gdpr\Model\Config;
-use Opengento\Gdpr\Service\Export\ProcessorInterface;
+use Adexos\Gdpr\Model\Config;
+use Adexos\Gdpr\Service\Export\ProcessorInterface;
 
 /**
  * Class CustomerAddressDataProcessor
@@ -35,7 +35,7 @@ final class CustomerAddressDataProcessor implements ProcessorInterface
     private $hydrator;
 
     /**
-     * @var \Opengento\Gdpr\Model\Config
+     * @var \Adexos\Gdpr\Model\Config
      */
     private $config;
 
@@ -43,7 +43,7 @@ final class CustomerAddressDataProcessor implements ProcessorInterface
      * @param \Magento\Customer\Api\AddressRepositoryInterface $addressRepository
      * @param \Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder
      * @param \Magento\Framework\EntityManager\Hydrator $hydrator
-     * @param \Opengento\Gdpr\Model\Config $config
+     * @param \Adexos\Gdpr\Model\Config $config
      */
     public function __construct(
         AddressRepositoryInterface $addressRepository,
