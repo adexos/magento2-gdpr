@@ -1,5 +1,5 @@
 {
-    "name": "opengento/module-gdpr",
+    "name": "adexos/module-gdpr",
     "description": "Gdpr Compliance Module for Magento 2",
     "keywords": [
         "php",
@@ -30,13 +30,18 @@
     "license": [
         "MIT"
     ],
-    "homepage": "https://github.com/opengento/magento2-gdpr",
+    "homepage": "https://github.com/adexos/magento2-gdpr",
     "authors": [
         {
             "name": "Opengento Team",
             "email": "opengento@gmail.com",
             "homepage": "https://opengento.fr/",
             "role": "lead"
+        },
+        {
+            "name": "Adexos",
+            "email": "dev@adexos.fr",
+            "homepage": "https://adexos.fr/"
         }
     ],
     "support": {
@@ -48,7 +53,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Opengento\\Gdpr\\": ""
+            "Adexos\\Gdpr\\": ""
         }
     }
 }
